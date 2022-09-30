@@ -1,3 +1,12 @@
+\pdfminorversion=4
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,latexsym,amsmath}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{document}
+
 .. _demo_multiple_variables:
 
 Using Multiple Variables and PDEs
@@ -14,7 +23,7 @@ following problem
 
 .. math::
 
-    &\min\; J((y,z), (u,v)) = \frac{1}{2} \int_\Omega \left( y - y_d \right) \text{ d}x + \frac{1}{2} \int_\Omega \left( z - z_d \right) \text{ d}x + \frac{\alpha}{2} \int_\Omega u^2 \text{ d}x + \frac{\beta}{2} \int_\Omega v^2 \text{ d}x \\
+    &\min\; J((y,z), (u,v)) = \frac{1}{2} \int_\Omega \left( y - y_d \right)^{2} \text{ d}x + \frac{1}{2} \int_\Omega \left( z - z_d \right)^{2} \text{ d}x + \frac{\alpha}{2} \int_\Omega u^2 \text{ d}x + \frac{\beta}{2} \int_\Omega v^2 \text{ d}x \\
     &\text{ subject to } \quad \left\lbrace \quad
     \begin{alignedat}{2}
     -\Delta y &= u \quad &&\text{ in } \Omega, \\
@@ -171,3 +180,6 @@ are then passed to the :py:class:`OptimalControlProblem <cashocs.OptimalControlP
 instead of the "single" objects as in the previous examples. Note, that each
 individual object of these lists is allowed to be from a different function space,
 and hence, this enables different discretizations of state and adjoint systems.
+
+
+\end{document}
